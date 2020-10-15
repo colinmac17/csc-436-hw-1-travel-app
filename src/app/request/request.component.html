@@ -1,0 +1,23 @@
+<div class="container">
+<h2 class="text-lg mb-4">Flight Requests</h2>
+<form class="mb-4">
+    <div class="form-group">
+      <label for="origin">Origin</label>
+      <input type="text" class="form-control" id="origin" aria-describedby="originHelp">
+    </div>
+    <div class="form-group">
+        <label for="destination">Destination</label>
+        <input type="text" class="form-control" id="destination" aria-describedby="originHelp">
+    </div>
+    <div class="form-group">
+        <label for="date">Travel Date</label>
+        <input type="date" class="form-control" id="date" aria-describedby="originHelp">
+    </div>
+    <div class="form-group">
+        <label for="travelers"># of travelers ($150 / traveler)</label>
+        <input type="number" min="0" class="form-control" value="{{numberOfTravelers}}" [(ngModel)]="numberOfTravelers" id="travelers" name="numberOfTravelers" aria-describedby="originHelp">
+    </div>
+    <button (click)="calculateCost($event)" class="btn btn-primary">Submit</button>
+</form>
+  <span>Total cost: ${{totalCost}}</span>
+</div>
