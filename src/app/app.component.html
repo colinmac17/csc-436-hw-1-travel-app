@@ -1,9 +1,13 @@
-<div class="jumbotron jumbotron-fluid">
-  <div class="text-center text-primary container p-5">
-    <h2>Welcome {{title}}</h2>
-    <p>OS: MacOS</p>
-    <p>IDE: Visual Studio Code</p>
-  </div>
-</div>
-<app-request></app-request>
-
+<router-outlet>
+  <ul class="nav">
+    <li class="nav-item">
+      <a class="nav-link active" href="/">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/flights">Flights</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/about">About</a>
+    </li>
+  </ul>
+</router-outlet>
